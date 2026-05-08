@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Sketch Camera</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <h1>Live Sketch Camera</h1>
+        <p>See yourself as a moving pencil sketch in real time.</p>
+      </section>
+
+      <section class="viewer-card">
+        <video id="sourceVideo" autoplay muted playsinline></video>
+        <canvas id="sketchCanvas" width="640" height="480"></canvas>
+      </section>
+
+      <section class="controls">
+        <button id="startBtn" class="btn btn-primary">Start Camera</button>
+        <button id="stopBtn" class="btn" disabled>Stop</button>
+        <button id="captureBtn" class="btn btn-accent" disabled>Capture Selfie</button>
+      </section>
+
+      <section class="status-row">
+        <span id="statusText">Ready</span>
+        <span id="latencyText">Latency: -</span>
+      </section>
+
+      <section id="captureResult" class="capture-result hidden">
+        <h2>Saved Sketch Selfie</h2>
+        <img id="savedImage" alt="Saved sketch selfie" />
+      </section>
+    </main>
+
+    <script src="/static/js/app.js"></script>
+  </body>
+</html>

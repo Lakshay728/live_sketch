@@ -1,0 +1,121 @@
+:root {
+  --bg: #0b1020;
+  --card: #131c34;
+  --text: #edf2ff;
+  --muted: #a7b4d6;
+  --primary: #6f8cff;
+  --accent: #37d6b5;
+  --danger: #ff6f91;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: radial-gradient(circle at top, #1a2444 0%, var(--bg) 50%);
+  color: var(--text);
+}
+
+.app-shell {
+  width: min(960px, 92vw);
+  margin: 2rem auto 3rem;
+}
+
+.hero h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+}
+
+.hero p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.viewer-card {
+  margin-top: 1.5rem;
+  background: rgba(19, 28, 52, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  backdrop-filter: blur(6px);
+}
+
+#sourceVideo,
+#sketchCanvas {
+  width: 100%;
+  max-height: 460px;
+  border-radius: 14px;
+  background: #060a16;
+}
+
+#sourceVideo {
+  display: none;
+}
+
+.controls {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: 0;
+  border-radius: 10px;
+  padding: 0.65rem 1rem;
+  color: var(--text);
+  background: #273458;
+  cursor: pointer;
+  transition: transform 0.12s ease, opacity 0.2s ease;
+}
+
+.btn:hover:enabled {
+  transform: translateY(-1px);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--primary);
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: #041216;
+  font-weight: 600;
+}
+
+.status-row {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.capture-result {
+  margin-top: 1.4rem;
+  background: var(--card);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.capture-result img {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hidden {
+  display: none;
+}
